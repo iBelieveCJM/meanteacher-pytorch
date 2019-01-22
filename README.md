@@ -1,5 +1,9 @@
 # MeanTeacher-PyTorch
-The repository implement a semi-supervised deep learning method, MeanTeacher. More details for the method please refer to *Mean teacher are better role models: Wegiht-averaged consistency targets improve semi-supervised deep learning results*.
+The repository implement two semi-supervised deep learning methods, MeanTeacher and PI model. More details for the method please refer to *Mean teacher are better role models: Wegiht-averaged consistency targets improve semi-supervised deep learning results* and *Temporal Ensembling for Semi-supervised Learning*.
+
+This repository is based on the official repository of [mean-teacher@CuriousAI](https://github.com/CuriousAI/mean-teacher). And there are not only ConvLarget Net implemented, but also other popular networks (come from [pytorch-cifar@kuangliu](https://github.com/kuangliu/pytorch-cifar)).
+
+I implemet PI model as a special case of MeanTeacher when smoothing coefficient hyperparameter is zero.
 
 ## The environment:
 
@@ -20,7 +24,11 @@ bash data-local/bin/prepare_cifar10.sh
 
 ## To run the code:
 ```shell
-python -m experiments.mt_test
+python -m experiments.ema_test
+```
+or
+```shell
+python -m experiments.pi_test
 ```
 
 ## Visualization:
@@ -31,5 +39,7 @@ tensorboard --logdir runs
 ```
 
 ## Code Reference
+
+[pytorch-cifar@kuangliu](https://github.com/kuangliu/pytorch-cifar)
 
 [mean-teacher@CuriousAI](https://github.com/CuriousAI/mean-teacher)
