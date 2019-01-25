@@ -96,6 +96,7 @@ def create_lr_scheduler(optimizer, config):
 
 def main(config):
     with SummaryWriter(comment='_{}_{}{}'.format(config.arch,config.dataset,config.model)) as writer:
+        print("PyTorch version: {}".format(torch.__version__))
         #writer = None
         if config.dataset == 'cifar10':
             dataset_config = datasets.cifar10()

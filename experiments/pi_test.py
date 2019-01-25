@@ -39,9 +39,9 @@ def parameters():
 
         # Optimization
         'loss': 'soft',
-        'optim': 'adam',
+        'optim': 'sgd',
         'epochs': 500,
-        'base_lr': 0.001,
+        'base_lr': 0.01,
         'momentum': 0.9,
         'weight_decay': 5e-4,
         'nesterov': True,
@@ -50,13 +50,13 @@ def parameters():
         # lr_schedular
         'steps': '100,150,200,250,300,350,400,450,480',
         'gamma': 0.5,
-        'lr_scheduler': 'cos',#'exp-warmup',
+        'lr_scheduler': 'exp-warmup',
         'min_lr': 1e-4,
         'rampup_length': 80,
         'rampdown_length': 50,
         
         # MeanTeacher
-        'cons_weight': 50.0,
+        'cons_weight': 10.0,
         'ema_decay': 0.97,
         'twice': True,
     }
