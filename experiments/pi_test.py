@@ -14,7 +14,7 @@ def parameters():
         # Technical details
         'is_parallel': False,
         'workers': 2,
-        'gpu': 2,
+        'gpu': 1,
 
         # Data
         'dataset': 'cifar10',
@@ -41,7 +41,7 @@ def parameters():
         'loss': 'soft',
         'optim': 'sgd',
         'epochs': 500,
-        'base_lr': 0.01,
+        'base_lr': 0.1,
         'momentum': 0.9,
         'weight_decay': 5e-4,
         'nesterov': True,
@@ -56,7 +56,7 @@ def parameters():
         'rampdown_length': 50,
         
         # MeanTeacher
-        'cons_weight': 10.0,
+        'cons_weight': 30.0,
         'ema_decay': 0.97,
         'twice': True,
     }
